@@ -82,6 +82,8 @@ type QueueInfo struct {
 	MessagesPersistent int         `json:"messages_persistent"`
 	MessagesRAM        int         `json:"messages_ram"`
 
+	HeadMessageTimestamp int `json:"head_message_timestamp"`
+
 	// Number of messages ready to be delivered
 	MessagesReady        int         `json:"messages_ready"`
 	MessagesReadyDetails RateDetails `json:"messages_ready_details"`
@@ -95,8 +97,8 @@ type QueueInfo struct {
 	OwnerPidDetails OwnerPidDetails `json:"owner_pid_details"`
 
 	BackingQueueStatus BackingQueueStatus `json:"backing_queue_status"`
-	
-	ActiveConsumers int64 `json:"active_consumers"`	
+
+	ActiveConsumers int64 `json:"active_consumers"`
 }
 
 type PagedQueueInfo struct {
